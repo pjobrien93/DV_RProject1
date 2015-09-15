@@ -8,4 +8,4 @@ summary(df)
 head(df)
 
 require(extrafont)
-ggplot(data = df, aes(x = AGE, y = FARE)) + geom_point(aes(color = SEX))
+ggplot(data = df, aes(x = AGE, y = FARE, color = SEX)) + geom_point()
