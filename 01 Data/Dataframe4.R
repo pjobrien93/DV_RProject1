@@ -7,7 +7,7 @@ df <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?que
 require(extrafont)
 ggplot() + 
   coord_cartesian() + 
-  scale_x_continuous() +
+  scale_x_discrete() +
   scale_y_continuous() +
   #facet_wrap(~SURVIVED) +
   #facet_grid(.~SURVIVED, labeller=label_both) + # Same as facet_wrap but with a label.
@@ -15,7 +15,7 @@ ggplot() +
   labs(title='Titanic') +
   labs(x="SURVIVED", y=paste("Fare")) +
   layer(data=df, 
-        mapping=aes(x=as.numeric(as.character(SURVIVED)), y=as.numeric(as.character(FARE)), color=SEX), 
+        mapping=aes(x=SEX, y=as.numeric(as.character(FARE)), color=SEX), 
         stat="identity", 
         stat_params=list(), 
         geom="point",
