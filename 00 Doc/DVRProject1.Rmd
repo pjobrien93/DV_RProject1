@@ -1,56 +1,70 @@
 ---
-title: "Data Visualization R Project1"
+title: "Data Visualization: R Project1"
 output: html_document
 ---
 
-##Mohammad Chauhan & Patricia O'brien
+###Mohammad Chauhan & Patricia O'brien
 
-#Basic Steps to begin the project.
+This HTML documents the steps for this project so it may be reproduced.
+
+####Basic Steps to begin the project.
 1. Create a GitHub Repository named DV_RProject1
 2. Clone the DV_RProject1 Repository into a DV_RProject1 folder in your Data Visualizaiton Folder, all of the project code should go into this repository.
 3. Create an RStudio DV_RProject1 Project for the DV_RProject1 folder (this is where you will do your development)
 4. Create the following structure in the RStudio DV_RProject1 Project:
-00 Doc - this is where you put your .Rmd file and related files, if any.
-01 Data - this contains the details of your data.
-02 Visualizations - this is where the ggplot programs go.
+  
+  * 00 Doc - this is where you put your .Rmd file and related files, if any.
+  
+  * 01 Data - this contains the details of your data.
+  
+  * 02 Visualizations - this is where the ggplot programs go.
 
-This HTML documents the steps for this project so it may be reproduced. The following plots are graphed using ggplot visualization techniques. The techniques for this are explained below each plot.
+5. Build dataframes for each of the plots you will have. In this case, we have six.
+6. For the first dataframe, which includes all of the data, display a summary and subset of the data in the HTML document.
 
+The following plots are graphed using ggplot visualization techniques. The techniques for this are explained below each plot.
+
+####Plot 1
 ```{r}
 source("../01 Data/Dataframe1.R", echo = TRUE)
 ```
 
 First load in the dataframe and include the passengers who had null as their sex. Then start a plot of age on the x-axis and fare on the y-axis. Declare the x and y axises as continuous because age and fare are continuous variables. Set your title and label the x-axis as "Age" and the y-axis as "Fare". 
 
+####Plot 2
 ```{r}
 source("../01 Data/Dataframe2.R", echo = TRUE)
 ```
 
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Then start a plot of age on the x-axis and fare on the y-axis. Declare the x and y axises as continuous because age and fare are continuous variables. Set your title and label the x-axis as "Age" and the y-axis as "Fare". 
 
+####Plot 3
 ```{r}
 source("../01 Data/Dataframe3.R", echo = TRUE)
 ```
 
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Set your title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by people who survived and didn't. 
 
+####Plot 4
 ```{r}
 source("../01 Data/Dataframe4.R", echo = TRUE)
 ```
 
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class and survival. Set the title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by sex. 
 
+####Plot 5
 ```{r}
 source("../01 Data/Dataframe5.R", echo = TRUE)
 ```
 
 First load in the dataframe and makes sure only people who are ten years old and younger are included in the dataframe. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class and survival. Set the title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by sex. 
 
+####Plot 6
 ```{r}
 source("../01 Data/Dataframe6.R", echo = TRUE)
 ```
 
-First load in the dataframe with passengers who did not have PCLASS as null. Declare the x-axis as discrete and the y-axis as continuous because sex and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class. Set the title and label the the x-axis as "Sex" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers.
+First load in the dataframe with passengers who did not have PCLASS as null. Declare the x-axis as discrete and the y-axis as continuous because sex is discrete and fare is a continuous variable. Partition the plot into a 2D matrix of panels based on passenger class and label it. Set the title and label the the x-axis as "Sex" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers.
 
 This data is displayed in a box plot. A box plot displays the distibution of the data based on five measurements: minimum, first quartile, median, third quartile, and maximum. These box plots show the distribution of fares for males and females in each passenger class.
 
