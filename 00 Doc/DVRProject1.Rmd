@@ -9,5 +9,14 @@ This HTML documents the steps for this project so it may be reproduced.
 ```{r}
 source("../01 Data/Dataframe1.R", echo = TRUE)
 ```
-
-
+```{r}
+source("../01 Data/Dataframe2.R", echo = TRUE)
+```
+```{r}
+source("../01 Data/Dataframe3.R", echo = TRUE)
+```
+```{r}
+source("../01 Data/Dataframe4.R", echo = TRUE)
+```
+```{r}
+source("../01 Data/Dataframe5.R", echo = TRUE)
