@@ -9,20 +9,30 @@ This HTML documents the steps for this project so it may be reproduced.
 ```{r}
 source("../01 Data/Dataframe1.R", echo = TRUE)
 ```
+
 First load in the dataframe and include the passengers who had null as their sex. Then start a plot of age on the x-axis and fare on the y-axis. Declare the x and y axises as continuous because age and fare are continuous variables. Set your title and label the x-axis as "Age" and the y-axis as "Fare". 
+
 ```{r}
 source("../01 Data/Dataframe2.R", echo = TRUE)
 ```
+
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Then start a plot of age on the x-axis and fare on the y-axis. Declare the x and y axises as continuous because age and fare are continuous variables. Set your title and label the x-axis as "Age" and the y-axis as "Fare". 
+
 ```{r}
 source("../01 Data/Dataframe3.R", echo = TRUE)
 ```
+
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Set your title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by people who survived and didn't. 
+
 ```{r}
 source("../01 Data/Dataframe4.R", echo = TRUE)
 ```
+
 First load in the dataframe and makes sure to not to include the passengers who had null as their sex. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class and survival. Set the title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by sex. 
+
 ```{r}
 source("../01 Data/Dataframe5.R", echo = TRUE)
 ```
+
 First load in the dataframe and makes sure only people who are ten years old and younger are included in the dataframe. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class and survival. Set the title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by sex. 
+
