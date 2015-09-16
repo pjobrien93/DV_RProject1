@@ -6,6 +6,20 @@ df <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?que
 df
 summary(df)
 head(df)
-
+  
 require(extrafont)
-ggplot(data = df, aes(x = AGE, y = FARE, color = SEX)) + geom_point()
+ggplot(data = df, aes(x = AGE, y = FARE), color = SEX) +
+  coord_cartesian() + 
+  scale_x_continuous() +
+  scale_y_continuous() +
+  labs(title='Titanic') +
+  labs(x="Age", y=paste("Fare")) +
+  layer(data=df, 
+        mapping=aes(x=as.numeric(as.character(AGE)), y=as.numeric(as.character(FARE)), color=SEX), 
+        stat="identity", 
+        stat_params=list(), 
+        geom="point",
+        geom_params=list(), 
+        #position=position_identity()
+        position=position_jitter(width=0.3, height=0)
+  )
