@@ -1,10 +1,10 @@
 ---
-title: "DV_RProject1"
+title: "Data Visualization R Project1"
 output: html_document
 ---
-<b>Mohammad Chauhan & Patricia O'brien</b>
+###Mohammad Chauhan & Patricia O'brien
 
-This HTML documents the steps for this project so it may be reproduced.
+This HTML documents the steps for this project so it may be reproduced. The following plots are graphed using ggplot visualization techniques.
 
 ```{r}
 source("../01 Data/Dataframe1.R", echo = TRUE)
@@ -36,3 +36,12 @@ source("../01 Data/Dataframe5.R", echo = TRUE)
 
 First load in the dataframe and makes sure only people who are ten years old and younger are included in the dataframe. Declare the x-axis as discrete and the y-axis as continuous because age and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class and survival. Set the title and label the the x-axis as "Survived" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers. Set the color to group by sex. 
 
+```{r}
+source("../01 Data/Dataframe6.R", echo = TRUE)
+```
+
+First load in the dataframe with passengers who did not have PCLASS as null. Declare the x-axis as discrete and the y-axis as continuous because sex and fare are continuous variables. Partition the plot into a 2D matrix of panels based on passenger class. Set the title and label the the x-axis as "Sex" and the y-axis as "Fare." Add a layer and make sure to convert the fare values on the y-axis from strings to integers.
+
+This data is displayed in a box plot. A box plot displays the distibution of the data based on five measurements: minimum, first quartile, median, third quartile, and maximum. These box plots show the distribution of fares for males and females in each passenger class.
+
+As seen in the box plots, passengers in passnger class 1 had a much larger distribution of fares than the other two classes. This may be because as the passenger class gets better, more amenities are offered or could be requested. Different requests may and amenities in the higher class may have caused the distribution in fares between the two genders and the three classes.
